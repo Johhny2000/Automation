@@ -26,12 +26,9 @@ def create_folders(path, name_folders, num_folders):
 
 
 if __name__ == "__main__":
-    # Get input from the user
     path = input("Enter the path where you want to create folders from Desktop: ")
     desktop_path = os.path.expanduser("~/Desktop")
     path = os.path.join(desktop_path, path)
     name_folders = input("Enter the base name of the folders: ")
     num_folders = int(input("Enter the number of folders to create: "))
-
-    # Call the function to create folders
     create_folders(path, name_folders, num_folders)

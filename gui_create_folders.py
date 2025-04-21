@@ -25,8 +25,6 @@ def create_folders_from_gui():
         path = textbox1.get()
         name_folders = textbox2.get()
         num_folders = int(textbox3.get())
-
-        # Call the function to create folders
         create_folders(path, name_folders, num_folders)
     except Exception as e:
         print(f"An error occurred: {e}")
@@ -34,7 +32,6 @@ def create_folders_from_gui():
 
 def create_folders(path, name_folders, num_folders):
     try:
-        # Check if the path exists
         if not os.path.exists(path):
             raise FileNotFoundError(f"The specified path '{path}' does not exist.")
 

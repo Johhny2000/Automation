@@ -20,17 +20,13 @@ def search_page(web_pages, search_term):
     driver = webdriver.Chrome(options=chrome_options)
 
     for page in web_pages:
-        # Make a request to your target website.
         driver.get(page)
-
-        # Get element list
         elements = driver.find_elements(By.CLASS_NAME, 'description')
 
         with open('shop_check_results.txt', 'a') as file:
             for element in elements:
                 file.write(element.text + "\n\n")
 
-    # Close the driver
     driver.quit()
 
 
